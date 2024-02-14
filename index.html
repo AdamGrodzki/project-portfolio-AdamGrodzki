@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Adam Grodzki </title>
     <link rel="stylesheet" href="./css//styles.css"/>
-    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/fa12d3dcd6.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -17,37 +17,41 @@
 
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
-                    <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+                    <li class="nav__item"><a href="#home" class="nav__link  active">Home</a></li>
                     <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
                     <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
                     <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
-                    <li class="nav__item"><a href="#interest" class="nav__link">Interests</a></li>
+                    <li class="nav__item"><a href="#interests" class="nav__link">Interests</a></li>
                     <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
                 </ul>
             </div>
 
             <div class="nav__toggle" id="nav-toggle">
-                <i class='bx bx-menu'></i>
+                <i class="fa-solid fa-bars"></i>
             </div>
         </nav>
     </header>
 
 
-
-
     <main class="l-main">
         <section class="home bd-grid" id="home">
             <div class="home__data">
-                <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Adam</span><br> Web Designer</h1>
-
+                <h1 class="home__title">Hi,<br>I'm <span class="home__title-color">Adam</span><br> Web Designer</h1>
                 <a href="#" class="button">Contact</a>
             </div>
 
-            <div class="home__social">
-                <a href="" class="home__social-icon"><i class='bx bxl-github' ></i></a>
-                <a href="" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
+            <div class="home__socials">
+                <a href="https://github.com/AdamGrodzki" class="home__social-icon"><i class="fa-brands fa-github"></i></a>
+                <a href="" class="home__social-icon"><i  class="fa-brands fa-linkedin"></i></a>
+                <a href="" class="home__social-icon"><i  class="fa-brands fa-facebook"></i></a>
+            </div>
+
+            <div class="home__img">
+                <img src="https://pbs.twimg.com/media/FQvnF0iXIAca9cu?format=jpg&name=small" alt="">
             </div>
         </section>
+
+
 
         <section class="about section" id="about">
             <h2 class="section-title">About</h2>
@@ -57,15 +61,108 @@
                     <img src="https://i.pinimg.com/564x/f0/af/cb/f0afcbce7ed4a7df7b822964501bf995.jpg" alt="my photo">
                 </div>
                 <div>
-                <h2 class="about__subtitle">I am Adam</h2>
-<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim recusandae quos nisi neque facere atque ea sapiente optio, culpa, corrupti amet reiciendis natus et, possimus accusamus praesentium nihil? Sunt necessitatibus, voluptate mollitia reprehenderit vel maiores natus, rem quos id veniam, adipisci laborum a. Fugiat ex, facere et obcaecati pariatur illum?</p>                </div>
+                <h2 class="about__subtitle">I'm Adam</h2>
+<p class="about__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim recusandae quos nisi neque facere atque ea sapiente optio, culpa, corrupti amet reiciendis natus et, possimus accusamus praesentium nihil? Sunt necessitatibus, voluptate mollitia reprehenderit vel maiores natus, rem quos id veniam, adipisci laborum a. Fugiat ex, facere et obcaecati pariatur illum?</p>                </div>
             </div>
         </section>
 
+        <section class="skills section" id="skills">
+            <h2 class="section-title">Skills</h2>
+
+            <div class="skills__container bd-grid">
+                <div>
+                    <h2 class="skills__subtitle">Skills</h2>
+                    <p class="skills__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, exercitationem.</p>
+                
+                    <div class="skills__data">
+                        <div class="skills__names">
+                            <i class="fa-brands fa-html5 skills__icon"></i>
+                            <span class="skills__name">HTML5</span>
+                        </div>
+                        <div>
+                            <span class="skills__percentage">80%</span>
+                        </div>
+                        <div class="skills__bar skills__html"></div>
+                    </div>
+                </div>
+                    <div class="skills__data">
+                        
+                        <div class="skills__names">
+                            <i class="fa-brands fa-css3-alt skills__icon"></i>
+                            <span class="skills__name">CSS3</span>
+                        </div>
+                        <div>
+                            <span class="skills__percentage">70%</span>
+                        </div>
+                        <div class="skills__bar skills__css"></div>
+                    </div>
+                    <div class="skills__data">
+                        
+                        <div class="skills__names">
+                            <i class="fa-brands fa-js skills__icon"></i>
+                            <span class="skills__name">JavaScript</span>
+                        </div>
+                        <div>
+                            <span class="skills__percentage">60%</span>
+                        </div>
+                        <div class="skills__bar skills__js"></div>
+                    </div>
+                </div>
+                    <div>
+                        <img class="skills__img" src="https://images.cgames.de/images/gsgp/290/one-piece-die-thousand-sunny_6180603.jpg" alt="">
+                    </div>
+            </div>
+        </section>
+
+    <section class="projects section" id="projects">
+        <h2 class="section-title">Projects</h2>
+
+        <div class="projects__container bd-grid">
+            <div class="projects__img">
+                <img src="https://preview.redd.it/which-is-your-favorite-naruto-fight-mine-naruto-vs-pain-v0-doymurtnd31a1.jpg?auto=webp&s=cb8477745f966290c30977cacfdf4d68e37d698b" alt="">
+            </div>
+            <div class="projects__img">
+                <img src="https://image.ceneostatic.pl/data/article_picture/1b/f3/4f26-effe-4b84-bfa8-df36c6bb745e_medium.jpg" alt="">
+            </div>
+            <div class="projects__img">
+                <img src="https://variety.com/wp-content/uploads/2023/03/Captain-Tsubasa-Junior-Youth-Arc-LCR-res.jpg?w=1000" alt="">
+            </div>
+        </div>
+    </section>
+
+<section class="interests section" id="interests">
+    <h2 class="section-title">Interests</h2>
+</section>
+
+<section class="contact section" id="contact">
+    <h2 class="section-title">Contact</h2>
+
+    <div class="contact-container bd-grid">
+        <form action="" class="contact__form">
+            <input  class="contact__input" type="text" placeholder="Name">
+            <input  class="contact__input" type="mail" placeholder="Email">
+            <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
+
+            <input type="button" value="Send" class="contact__button button">
+        </form>
+    </div>
+</section>
     </main>
-    <footer></footer>
+
+    <footer class="footer section" id="footer">
+        <p class="footer__title">Adam Grodzki</p>
+
+        <div class="footer__social">
+            <a href="" class="footer__icon"><i class="fa-brands fa-github"></i></a>
+            <a href="" class="footer__icon"><i class="fa-brands fa-instagram"></i></a>
+            <a href="" class="footer__icon"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+        <p>&copy; 2024 copyright all right reserved</p>
+    </footer>
     
-    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="./javaScript/app.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
 </body>
 </html>
+
+
