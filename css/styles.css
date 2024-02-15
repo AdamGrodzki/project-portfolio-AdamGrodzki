@@ -144,6 +144,9 @@ img {
         background-color: var(--second-color);
         transition: 0.5s;
     }
+    .home__img {
+        margin-bottom: -30px;
+    }
 }
 
 .nav__item {
@@ -310,7 +313,15 @@ img {
 .skills__icon {
     font-size: 32px;
     margin-right: var(--mb-2);
-    color: var(--first-color);
+}
+.fa-html5 {
+    color: #214ce5;
+}
+.fa-css3-alt {
+    color: #f26529;
+}
+.fa-js {
+    color: #f0db4f;
 }
 
 .skills__names {
@@ -409,7 +420,12 @@ img {
     font-size: 24px;
     color: var(--text-color);
     margin: 0 var(--mb-2);
+    transition: box-shadow 1s ease;
 }
+.fa-github {
+    box-shadow: 0px 0px 135px 0px rgba(45,255,196,1);
+}
+
 
 @media screen and (min-width: 768px){
     body {
