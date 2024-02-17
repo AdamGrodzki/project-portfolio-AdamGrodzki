@@ -296,6 +296,7 @@ img {
 }
 
 .skills__text {
+    text-align: start;
     margin-bottom: var(--mb-4);
 }
 
