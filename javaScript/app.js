@@ -58,7 +58,52 @@ sr.reveal('.home__social-icon', {interval: 200});
 sr.reveal('.skills__data, .projects__img, .contact__input', {interval: 200});
 
 
-function tooltipFunction() {
-    var tooltip = document.getElementById("clicktooltip");
-    tooltip.classList.toggle("shows");
+// DARK MODE
+document.body.style="background-color: var(--second-bg-color);transition: .3s;"
+const sun = src="https://img.icons8.com/emoji/48/crescent-moon-emoji.png";
+const moon = src="https://img.icons8.com/color/48/sun--v1.png";
+
+var theme = "dark";
+  const root = document.querySelector(":root");
+  const container = document.getElementsByClassName("theme-container")[0];
+  const themeIcon = document.getElementById("theme-icon");
+  container.addEventListener("click", setTheme);
+
+
+
+  function setTheme() {
+    switch (theme) {
+      case "dark":
+        setLight();
+        theme = "light";
+        break;
+      case "light":
+        setDark();
+        theme = "dark";
+        break;
     }
+  }
+  function setLight() {
+    document.documentElement.style.setProperty('--bg-color', '#fff')
+    root.style.setProperty('--text-color', '#000');
+    root.style.setProperty("--second-bg-color", "--text-color");
+    container.classList.remove("shadow-dark");
+    setTimeout(() => {
+      container.classList.add("shadow-light");
+      themeIcon.classList.remove("change");
+    }, 300);
+    themeIcon.classList.add("change");
+    themeIcon.src = sun;
+  }
+  function setDark() { 
+    root.style.setProperty('--text-color', '#fff');
+    root.style.setProperty("--second-bg-color", "#323946");
+    container.classList.remove("shadow-light");
+    setTimeout(() => {
+      container.classList.add("shadow-dark");
+      themeIcon.classList.remove("change");
+    }, 300);
+    themeIcon.classList.add("change");
+    themeIcon.src = moon;
+  }
+
