@@ -23,10 +23,10 @@
     /* COLORS */
     --bg-color: #1f242d;
     --second-bg-color: #323946;
-    --text-color: #fff;
-    --second-text-color: #000;
-    --main-color: #0ef;
 
+    --text-color: #fff;
+    --main-color: #0ef;
+    --second-text-color: #000;
   }
 
 *, ::before, ::after {
@@ -98,9 +98,9 @@ img {
 .bd-grid {
     max-width: 1024px;
     display: grid;
-    /* grid-template-columns: 100%; */
-    /* grid-column-gap: 32px; */
-    /* width: calc(100% - 32px); */
+    grid-template-columns: 100%;
+    grid-column-gap: 32px;
+    width: calc(100% - 32px);
     margin-left: var(--mb-2);
     margin-right: var(--mb-2);
 }
@@ -111,7 +111,7 @@ img {
     left: 0;
     z-index: var(--z-fixed);
     box-shadow: 0 1px 4px rgba(146, 161, 176, 0.2);
-    background-color: drop-shadow(100px 100px #0ef)
+    background-color: var(--bg-color);
 }
 /* NAV */
 .nav {
@@ -139,6 +139,9 @@ img {
     .about__img {
         max-width: 20%;
     }
+}
+.btn__mode {
+    display: flex;
 }
 .nav__item {
     margin-bottom: var(--mb-4);
@@ -201,6 +204,14 @@ img {
 .home__title-color {
    color: var(--main-color); 
 }
+.home__title-color {
+    animation: glow 2.5s linear infinite 2s;
+            }
+    @keyframes glow {
+      40% {
+        text-shadow: 0 0 10px white;
+      }
+    }
 .home__socials {
     display: flex;
     flex-direction: column;
@@ -337,8 +348,9 @@ img {
 }
 .projects__img img {
     /* height: 240px; */
-    height: 100%;
+    /* height: 100%; */
     cursor: pointer;
+    aspect-ratio: calc(3/2);
 }
 /* CONTACT */
 .contact__input {
@@ -406,7 +418,7 @@ img {
     font-size: 20px;
     position: absolute;
     width: 100%;
-    top: 40%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -433,16 +445,6 @@ img {
     font-weight: var(--font-weight);
     color: var(--text-color);
 }
-  .home__title-color {
-    animation: 
-               glow 2.5s linear infinite 2s;
-            }
-    @keyframes glow {
-      40% {
-        text-shadow: 0 0 10px white;
-      }
-    }
-
 /* MEDIA QUERIES  */
 @media screen and (max-width: 320px){
     .home{
@@ -569,6 +571,9 @@ img {
     .contact-container {
         justify-items: center;
     }
+    .btn__mode {
+        display: flex;
+    }
 }
 @media screen and (min-width: 992px) {
     .bd-grid {
@@ -581,46 +586,44 @@ img {
     .home__img {
         width: 450px;
     }
+    .btn__mode {
+        display: flex;
+    }
 }
 
-.theme-container {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.5s;
-  }
-  
-  .theme-container:hover {
-    opacity: 0.8;
-  }
-  
-  .shadow-dark {
-    background-color: var(--bg-color);
-    box-shadow: 17px 17px 23px var(--bg-color),
-      -17px -17px 23px var(--second-bg-color), inset 5px 5px 4px var(--bg-color),
-      inset -5px -5px 4px var(--second-bg-color);
-  }
-  
-  .shadow-light {
-    box-shadow: 7px 7px 15px -10px #bbcfda, -4px -4px 13px var(--text-color),
-      inset 7px 7px 3px rgba(209, 217, 230, 0.35),
-      inset -11px -11px 3px rgba(255, 255, 255, 0.3)
-  }
-  .change {
-      animation: change 1s alternate;
+   .dark-mode {
+        background-color: var(--second-bg-color);
+        color: (--text-color);
+        }
+    .light-mode {
+        background-color: var(--text-color);
+        background-color: #ede7de;
+        color: var(--second-text-color);
+        .home__social-icon {
+        color: var(--second-text-color);
+            }
+    .button {
+        color: var(--second-text-color);
+        background-color: var(--main-color);
     }
-    @keyframes change {
-      0% {
-        transform: scale(1);
-      }
-    
-      100% {
-        transform: scale(1.4);
-      }
+    .button:hover {
+        background-color: #ede7de;  
     }
+    .home__social-icon:hover {
+        color: var(--main-color);
+        text-shadow: 0 0 25px var(--main-color);
+            }
+        }
+
+    .moon, .sun {
+        position: relative;
+        background-color: #323946;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        font-size: 20px;
+        }
+    .moon:hover, .sun:hover {
+    background: linear-gradient(to bottom, #323946, #1f242d);
+        } 
+
