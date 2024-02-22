@@ -161,7 +161,7 @@ img {
     height: 3px;
     left: 0;
     top: 32px;
-    background-color: var(--main-color);
+    /* background-color: var(--main-color); */
   }
   .nav__logo {
     width: 150px;
@@ -626,4 +626,3 @@ img {
     .moon:hover, .sun:hover {
     background: linear-gradient(to bottom, #323946, #1f242d);
         } 
-
