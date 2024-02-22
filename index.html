@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Adam Grodzki </title>
     <link rel="stylesheet" href="./css//styles.css"/>
+    <link rel="icon" href="./images/shiba.png">
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://kit.fontawesome.com/fa12d3dcd6.js" crossorigin="anonymous"></script>
 </head>
@@ -83,7 +84,7 @@
 
             <div class="skills__container bd-grid">
                 <div>
-                    <p class="skills__text about__text">My skills are wide ranging, spanning across multiple creative and technical disciplines. I absorb information like a sponge and I am in constant pursuit of skills that can help develop me into a well rounded professional.</p>
+                    <p class="skills__text about__text">My skills are wide ranging, spanning across multiple creative and technical disciplines.<br> I absorb information like a sponge and I am in constant pursuit of skills that can help develop me into a well rounded professional.</p>
                 
                     <div class="skills__data">
                         <div class="skills__names">
@@ -134,9 +135,36 @@
                     </div>
                   
                 </div>
-                    <div>
+                    <!-- <div>
                         <img class="skills__img" src="https://cdn.britannica.com/84/203584-050-57D326E5/speed-internet-technology-background.jpg" alt="">
-                    </div>
+                    </div> -->
+                    <div class="box">
+                        <div class="head">                            
+                          <div class="ear ear-left">                            
+                          </div>                          
+                           <div class="ear ear-right">
+                          </div>                          
+                          <div class="eye eye-left">
+                            <div class="pupil">
+                              <div class="whites"></div>
+                            </div>
+                          </div>
+                          <div class="eye eye-right">
+                            <div class="pupil">
+                              <div class="whites"></div>
+                            </div>
+                          </div>                          
+                           <div class="nose">
+                              <div class="inner-nose"></div>
+                              <div class="line"></div>
+                              <div class="mouth"></div>
+                              <div class="tongue"></div>
+                           </div>                                
+                          <div class="collar"></div>
+                          <div class="tag">C</div>
+                        </div>
+                     </div>
+                     
             </div>
         </section>
 
@@ -189,12 +217,12 @@
     <h2 class="section-title">CONTACT</h2>
 
     <div class="contact-container bd-grid">
-        <form action="" class="contact__form">
-            <input  class="contact__input" type="text" placeholder="Name">
-            <input  class="contact__input" type="mail" placeholder="Email">
+        <form action="mailto:adam.grodzki95@gmail.com" method="post" enctype="text/plain" class="contact__form">
+            <input  class="contact__input" type="text" placeholder="Name" required>
+            <input  class="contact__input" type="email" placeholder="Email" required>
             <textarea rows="10" class="contact__input"></textarea>
 
-            <input type="button" value="Send" class="contact__button button">
+            <button type="submit" value="Send" class="contact__button button">Send</button>
         </form>
     </div>
 </section>
