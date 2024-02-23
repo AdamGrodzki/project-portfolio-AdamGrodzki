@@ -57,7 +57,7 @@ sr.reveal('.home__social-icon', {interval: 200});
 sr.reveal('.skills__data, .projects__img, .contact__input', {interval: 200});
 
 
-// DARK MODE
+//THEME MODE
 function darkMode() {
   let element = document.body;
   element.className = "dark-mode";
