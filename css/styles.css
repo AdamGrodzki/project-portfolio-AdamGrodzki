@@ -365,7 +365,7 @@ img {
     cursor: pointer;
     font-size: var(--normal-font-size);
     margin-left: auto;
-    outline: solid #0ef;
+    outline: solid var(--text-color-aqua);
 }
 
 /* FOOTER */
@@ -426,7 +426,7 @@ img {
   .text__technology {
     text-align: center;
     position: relative;
-    color: #0ef;
+    color: var(--text-color-aqua);
     top: 85%;
     font-size: 12px;
     text-shadow: 0px 0px 10px var(--text-color-white);
@@ -600,7 +600,7 @@ img {
  }
 .light-mode {
     background-color: var(--text-color-white);
-    background-color: #ede7de;
+    background-color: var(--bg-color-light);
     color: var(--text-color-black);
     .home__social-icon {
     color: var(--text-color-black);
@@ -618,6 +618,9 @@ img {
 .button:hover {
     background-color: #ede7de;  
 }
+.home__title-color {
+    animation: glowForest 1.8s linear infinite;
+}
 .home__social-icon{
     color: var(--text-color-black);
 }
@@ -625,6 +628,9 @@ img {
     color: var(--text-color-forest);
     text-shadow: 0 0 25px var(--text-color-forest);
     }
+.button{
+    outline: solid var(--text-color-forest);
+}
 .footer__title {
     background-image: url(https://i.pinimg.com/originals/ec/14/b7/ec14b7a99d3010bc1a3b5437face6044.gif);
     }
@@ -787,6 +793,9 @@ img {
 /* KEYFRAMES  */
 @keyframes glow {
     40% {text-shadow: 0 0 10px var(--text-color-white);}
+}
+@keyframes glowForest {
+    40% {text-shadow: 0 0 10px var(--text-color-forest);}
 }
 @keyframes pulse-animation {
     0% {filter: drop-shadow(0 0 5px var(--bg-color-dark));}

@@ -53,6 +53,7 @@ sr.reveal('.home__title',{})
 sr.reveal('.button', {delay: 200});
 sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text', {});
 sr.reveal('.home__img, .about__subtitle, .about__text, .skills_img', {delay: 400});
+sr.reveal('.section-title', {delay: 200});
 sr.reveal('.home__social-icon', {interval: 200});
 sr.reveal('.skills__data, .projects__img, .contact__input', {interval: 200});
 
