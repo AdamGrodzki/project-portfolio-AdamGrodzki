@@ -162,7 +162,7 @@ img {
         height: 3px;
         left: 0;
         top: 32px;
-    /* background-color: var(--main-color); */
+        /* background-color: var(--main-color); */
 }
     .nav__logo {
         width: 150px;
@@ -251,7 +251,9 @@ img {
     background-color: var(--bg-color-dark);
     outline-color: #0ef;
 }
-
+.button:focus {
+    outline: 2px solid #000000;
+}
 /* ABOUT  */
 .about__container {
     row-gap: 32px;
@@ -637,6 +639,9 @@ img {
 .section-title::after {
     background-color: var(--text-color-forest);
 }
+.button:focus {
+    outline: 2px solid orange;
+    }
 }
 .moon, .sun {
     position: relative;
@@ -655,7 +660,7 @@ img {
 .box {
     position: relative;
     margin: auto;
-    top: 25%;
+    top: 12%;
     width: 250px;
     height: 250px;
 }
