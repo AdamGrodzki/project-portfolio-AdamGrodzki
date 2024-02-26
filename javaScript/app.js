@@ -22,6 +22,21 @@ navLink.forEach(n => n.addEventListener('click', linkAction))
 
 const sections = document.querySelectorAll('section[id]');
 
+const header = document.querySelector('header');
+
+// ACTIVE SCROLL HEADER 
+const stickHeader = () => {
+    const scroll = window.scrollY;
+
+    if(scroll > 1) {
+        header.classList.add('active');
+    } else {
+        header.classList.remove('active')
+    }
+}
+
+window.addEventListener("scroll", stickHeader)
+
 // SCROLL REVEAL 
 const scrollActive = () => {
     const scrollDown = window.scrollY
@@ -43,7 +58,7 @@ document.addEventListener('scroll', scrollActive)
 
 const sr = ScrollReveal({
     origin: 'top',
-    distance: '60px',
+    distance: '40px',
     duration: 2000,
     delay: 200,
     reset: true,
@@ -70,11 +85,12 @@ function lightMode() {
 document.getElementById("dark__mode").addEventListener("click", darkMode);
 document.getElementById("light__mode").addEventListener("click", lightMode);
 
-//AOS ANIMATION 
+// AOS ANIMATION 
 AOS.init({
     startEvent: 'DOMContentLoaded',
-    duration: 500,
+    duration: 800,
     once: false,
-    offset: 300,
-    easing: "ease-in"
+    easing: "ease-in",
+    delay: 800,
 });
+

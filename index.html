@@ -53,7 +53,7 @@
                 <a href="#" class="home__social-icon"><i  class="fa-brands fa-facebook"></i></a>
             </div>
 
-            <div class="home__img">
+            <div class="home__img" data-aos="zoom-in">
                 <img src="./images/Adam Grodzki.png" class="main__avatar" alt="my-photo-Adam-Grodzki">
                     </div>
                   </div>
@@ -65,7 +65,7 @@
         <section class="about section" id="about">
             <h2 class="section-title">ABOUT ME</h2>
 
-            <div class="about__container bd-grid">
+            <div class="about__container bd-grid"data-aos="fade-left">
                 <div class="about__img">
                     <img src="./images/Adam Grodzki.png" alt="my-photo-Adam-Grodzki">
                 </div>
@@ -81,10 +81,10 @@
             </div>
         </section>
 
-        <section class="skills section" id="skills" data-aos="fade-right">
+        <section class="skills section" id="skills">
             <h2 class="section-title">SKILLS</h2>
 
-            <div class="skills__container bd-grid">
+            <div class="skills__container bd-grid" data-aos="fade-right">
                 <div>
                     <p class="skills__text about__text">My skills are wide ranging, spanning across multiple creative and technical disciplines.<br> I absorb information like a sponge and I am in constant pursuit of skills that can help develop me into a well rounded professional.</p>
                 
@@ -132,6 +132,14 @@
                         <div class="skills__names">
                             <i class="fa-brands fa-github skills__icon"></i>
                             <span class="skills__name">Github</span>
+                        </div>
+                        <span>Beginner</span>
+                    </div>
+                    <div class="skills__data">
+                        
+                        <div class="skills__names">
+                            <i class="fa-brands fa-sass skills__icon"></i>
+                            <span class="skills__name">Sass</span>
                         </div>
                         <span>Beginner</span>
                     </div>
@@ -210,6 +218,26 @@
                     </div>
                   </div>
             </div>
+            <div class="projects__img">
+                <img src="./images/catsAttack.png" alt="cats-attack">
+                <div class="overlay">
+                    <div class="text"><a class="nav__link" href="https://github.com/AdamGrodzki/CatsAttack" target="_blank">Cats Attack!</div></a>
+                        <span class="project__describe">A simple game written in C#, dog versus cats.</span>          
+                    <div class="text__technology">
+                        <span class="border__technology">C#</span>
+                    </div>
+                  </div>
+            </div>
+            <div class="projects__img">
+                <img src="./images/catsAttack.png" alt="cats-attack">
+                <div class="overlay">
+                    <div class="text"><a class="nav__link" href="https://github.com/AdamGrodzki/CatsAttack" target="_blank">Cats Attack!</div></a>
+                        <span class="project__describe">A simple game written in C#, dog versus cats.</span>          
+                    <div class="text__technology">
+                        <span class="border__technology">C#</span>
+                    </div>
+                  </div>
+            </div>
         </div>
     </section>
 <section class="contact section" id="contact">
@@ -227,7 +255,8 @@
 </section>
     </main>
 
-    <footer class="footer section" id="footer">
+    <footer class="footer section" id="footer" data-aos="fade-up"
+    data-aos-delay="250">
         <p class="footer__title">Adam Grodzki</p>
 
         <div class="footer__social">
