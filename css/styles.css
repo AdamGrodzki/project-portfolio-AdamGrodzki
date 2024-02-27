@@ -29,7 +29,11 @@
     --text-color-aqua: #0ef;
     --text-color-black: #000;
     --text-color-forest: #025a4e;
+
+    /* --scroll-padding: 30rem */
+    
 }
+
 
 *, ::before, ::after {
     box-sizing: border-box;
@@ -39,6 +43,7 @@
 
 html {
     scroll-behavior: smooth;
+    /* scroll-padding: var(--scroll-padding) + 10rem; */
 }
 
 body {
@@ -182,6 +187,11 @@ img {
 }
     .nav__logo {
         width: 150px;
+        opacity:0.5;
+        transition: .3s ease;
+}
+.nav__logo:hover {
+        opacity:1;
 }
     .nav__toggle {
         color: var(--text-color-white);
@@ -507,7 +517,7 @@ img {
         column-gap: 16px;
     }
     .projects__container {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         column-gap: 32px;
         padding-top: 32px;
     }
@@ -572,7 +582,7 @@ img {
         text-align: initial;
     }
     .projects__container {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         column-gap: 32px;
     }
     .home__data {
@@ -652,8 +662,22 @@ img {
 .button{
     outline: solid var(--text-color-forest);
 }
+.border__technology {
+    color: var(--bg-color-light);
+    border-color: #025a4e;
+}
+.project__describe {
+    color: var(--bg-color-light);
+}
+.nav__link:hover {
+    color: var(--text-color-forest);
+}
+.active-link::after {
+    background-color: var(--text-color-forest);
+}
 .footer__title {
-    background-image: url(https://i.pinimg.com/originals/ec/14/b7/ec14b7a99d3010bc1a3b5437face6044.gif);
+    background-image: url(https://lh3.googleusercontent.com/proxy/ZJo8OJeHMvMhSwDtpojd7OCHnI5ZYtLLA1ptZlOZmzahCxwfwuyRLwZNXdU_PAButF5YeCwrrW1_NJEHDxEfAlDVXujSurkXA8C3iCFKH5fCp8Jjqa3nZfJSgNpzM8m6AEJyhzTeTyLDxCbrgw);
+    background-position: right;
     }
 .section-title::after {
     background-color: var(--text-color-forest);
@@ -815,6 +839,10 @@ img {
     font-weight: var(--font-weight);
 }
 /* KEYFRAMES  */
+@keyframes flash {
+	0% {opacity: .4;}
+	100% {opacity: 1;}
+}
 @keyframes glow {
     40% {text-shadow: 0 0 10px var(--text-color-white);}
 }
@@ -839,4 +867,3 @@ img {
     50% { transform: rotate(5deg);}
     100% { transform: rotate(-5deg);}
 }
- 
