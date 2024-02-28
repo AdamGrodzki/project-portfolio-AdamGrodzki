@@ -73,7 +73,9 @@ img {
     height: auto;
     max-width: 100%;
 }
-
+form {
+    padding-top: var(--mb-2);
+}
 /* SECTION */
 .section-title {
     color: var(--text-color-aqua);
@@ -95,16 +97,22 @@ img {
     background-color: var(--text-color-aqua);
 }
 .section {
-    /* padding-top: 48px; */
+    /* padding-top: 48px;
     padding-top: 56px;
-    padding-bottom: 32px;
+    padding-bottom: 32px; */
+    padding-top: 100px;
+    padding-bottom: 120px;
+}
+/* EXAMPLE */
+.grid {
+    display: grid;
 }
 
 /* LAYOUT  */
 .bd-grid {
     max-width: 1024px;
+    width: 100%;
     display: grid;
-    grid-template-columns: 100%;
     grid-column-gap: 32px;
     width: calc(100% - 32px);
     margin-left: var(--mb-2);
@@ -112,6 +120,7 @@ img {
 }
 .l-header {
     width: 100%;
+    width: 100vw;
     position: fixed;
     top: 0;
     left: 0;
@@ -122,9 +131,6 @@ img {
 
 .active {
     box-shadow: 
-    /* 1px 2px 2px #3366cc55,
-    2px 4px 4px #3366cc55,
-    3px 6px 6px #3366cc55; */
     1px 2px 2px #b9b0b0,
     1px 2px 2px #b9b0b0,
     1px 2px 2px #b9b0b0; 
@@ -150,8 +156,11 @@ img {
         background-color: var(--bg-color-dark);
         transition: 0.5s;
     }
+    /* .bd-grid {
+        width: 100%;
+    } */
     .main__avatar {
-        margin-bottom: 15%;
+        margin-bottom: 40%;
         width: 20%;
     }
     .about__img {
@@ -220,6 +229,7 @@ img {
     padding: 64px 0 80px;
     position: relative;
     row-gap: 80px;
+    height: 100vh;
 }
 .home__data {
     align-self: center;
@@ -480,6 +490,9 @@ img {
 /* MEDIA QUERIES  */
 /* MEDIA-QUERIES(MAX WIDTH: 320PX) */
 @media screen and (max-width: 320px){
+    .bd-grid {
+        width: 100%;
+    }
     .home{
         row-gap: 34px;
     }
@@ -489,6 +502,9 @@ img {
 }
 /* MEDIA-QUERIES(MIN-WIDTH: 576PX) */
 @media screen and (min-width: 576px) {
+    .bd-grid {
+        width: 100%;
+    }
     .home {
         padding: 60px 0 128px;
     }
@@ -534,9 +550,13 @@ img {
     body {
         margin: 0;
     }
+    .bd-grid {
+        width: 100%;
+    }
     .section {
         padding-top: 64px;
         padding-bottom: 48px;
+        padding: 100px 105px;
     }
     .section-title {
         margin-bottom: var(--mb-6);
@@ -610,9 +630,11 @@ img {
 }
 /* MEDIA-QUERIES(MIN-WIDTH: 992PX) */
 @media screen and (min-width: 992px) {
+    
     .bd-grid {
         margin-left: auto;
         margin-right: auto;
+        width: 100%;
     }
     .home {
         padding: 160px 0 32px;
@@ -676,14 +698,25 @@ img {
     background-color: var(--text-color-forest);
 }
 .footer__title {
-    background-image: url(https://lh3.googleusercontent.com/proxy/ZJo8OJeHMvMhSwDtpojd7OCHnI5ZYtLLA1ptZlOZmzahCxwfwuyRLwZNXdU_PAButF5YeCwrrW1_NJEHDxEfAlDVXujSurkXA8C3iCFKH5fCp8Jjqa3nZfJSgNpzM8m6AEJyhzTeTyLDxCbrgw);
-    background-position: right;
+    background-image: url(https://media.tenor.com/z2FCN8fira0AAAAM/flamethrower-on-flame.gif);
+    background-position: center;
     }
 .section-title::after {
     background-color: var(--text-color-forest);
 }
 .button:focus {
     outline: 2px solid orange;
+    }
+    .scrollUp__icon {
+    color: var(--text-color-black);
+}
+    .scrollUp {
+        background-color: var(--text-color-forest);
+        transition: .4s;
+    }
+    .scrollUp:hover {
+        background-color: var(--bg-color-light);
+        outline: solid var(--text-color-forest);
     }
 }
 .moon, .sun {
@@ -697,7 +730,8 @@ img {
 .moon:hover, .sun:hover {
     background: linear-gradient(to bottom, 
     var(--bg-color-dark), var(--bg-color-grey));
-} 
+}
+
 
 /* DOG */
 .box {
@@ -826,6 +860,7 @@ img {
     z-index: -1;
 }
 .tag {
+    display: none;
     background: orange;
     position: absolute;
     height: 20px;
@@ -838,6 +873,32 @@ img {
     color: var(--text-color-black);
     font-weight: var(--font-weight);
 }
+.scrollUp {
+    position: fixed;
+    right: 16px;
+    bottom: -50px;
+    background-color: var(--text-color-aqua);
+    opacity: .8;
+    padding: 6px;
+    border-radius: 6px;
+    z-index: var(--z-fixed);
+    transition: .4s;
+}
+.scrollUp:hover {
+    background-color: var(--bg-color-dark);
+}
+.scrollUp__icon {
+    font-size: 30px;
+    color: var(--text-color-white);
+    width: 30px;
+    height: 30px;
+    text-align: center;    
+}
+.show-scroll {
+    bottom: 24px;
+}
+
+
 /* KEYFRAMES  */
 @keyframes flash {
 	0% {opacity: .4;}

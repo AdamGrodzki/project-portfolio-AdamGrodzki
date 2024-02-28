@@ -73,14 +73,9 @@ sr.reveal('.home__social-icon', {interval: 200});
 sr.reveal('.projects__img, .contact__input', {interval: 200});
 
 //THEME MODE
-function darkMode() {
-  let element = document.body;
-  element.className = "dark-mode";
-}
-function lightMode() {
-  let element = document.body;
-  element.className = "light-mode";
-}
+const darkMode = () => document.body.className = "dark-mode";
+const lightMode = () => document.body.className = "light-mode";
+
 
 document.getElementById("dark__mode").addEventListener("click", darkMode);
 document.getElementById("light__mode").addEventListener("click", lightMode);
@@ -93,3 +88,30 @@ AOS.init({
     easing: "ease-in",
     delay: 800,
 });
+
+function ScrollUp() {
+    const scrollUp = document.getElementById('scroll-up');
+    this.scrollY >= 300 ? scrollUp.classList.add('show-scroll') : scrollUp.classList.remove('show-scroll');
+}
+window.addEventListener('scroll', ScrollUp)
+
+
+
+// document.querySelectorAll('nav a').forEach(anchor => {
+//     anchor.addEventListener('click', function(e) {
+//       e.preventDefault();
+  
+//       const targetId = this.getAttribute('href').substring(1);
+//       const targetSection = document.getElementById(targetId);
+
+//       console.log("targetSection", targetSection)
+//       console.log("targetID:", targetId)
+
+//       window.scrollTo({
+//         top: targetSection.offsetTop,
+//         behavior: 'smooth',
+//         duration: 2500,
+//     });
+// });
+// });
+
