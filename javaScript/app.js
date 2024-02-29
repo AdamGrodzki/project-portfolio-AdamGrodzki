@@ -93,25 +93,4 @@ function ScrollUp() {
     const scrollUp = document.getElementById('scroll-up');
     this.scrollY >= 300 ? scrollUp.classList.add('show-scroll') : scrollUp.classList.remove('show-scroll');
 }
-window.addEventListener('scroll', ScrollUp)
-
-
-
-// document.querySelectorAll('nav a').forEach(anchor => {
-//     anchor.addEventListener('click', function(e) {
-//       e.preventDefault();
-  
-//       const targetId = this.getAttribute('href').substring(1);
-//       const targetSection = document.getElementById(targetId);
-
-//       console.log("targetSection", targetSection)
-//       console.log("targetID:", targetId)
-
-//       window.scrollTo({
-//         top: targetSection.offsetTop,
-//         behavior: 'smooth',
-//         duration: 2500,
-//     });
-// });
-// });
-
+window.addEventListener('scroll', ScrollUp);

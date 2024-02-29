@@ -30,7 +30,6 @@
     --text-color-black: #000;
     --text-color-forest: #025a4e;
 
-    /* --scroll-padding: 30rem */
     
 }
 
@@ -43,7 +42,6 @@
 
 html {
     scroll-behavior: smooth;
-    /* scroll-padding: var(--scroll-padding) + 10rem; */
 }
 
 body {
@@ -97,30 +95,20 @@ form {
     background-color: var(--text-color-aqua);
 }
 .section {
-    /* padding-top: 48px;
     padding-top: 56px;
-    padding-bottom: 32px; */
-    padding-top: 100px;
-    padding-bottom: 120px;
-}
-/* EXAMPLE */
-.grid {
-    display: grid;
+    padding-bottom: 48px;   
 }
 
 /* LAYOUT  */
 .bd-grid {
     max-width: 1024px;
-    width: 100%;
     display: grid;
     grid-column-gap: 32px;
-    width: calc(100% - 32px);
     margin-left: var(--mb-2);
     margin-right: var(--mb-2);
 }
 .l-header {
     width: 100%;
-    width: 100vw;
     position: fixed;
     top: 0;
     left: 0;
@@ -128,7 +116,9 @@ form {
     box-shadow: 0 1px 4px rgba(146, 161, 176, 0.2);
     background-color: var(--bg-color-dark);
 }
-
+.l-main {
+    overflow: hidden;
+}
 .active {
     box-shadow: 
     1px 2px 2px #b9b0b0,
@@ -156,9 +146,6 @@ form {
         background-color: var(--bg-color-dark);
         transition: 0.5s;
     }
-    /* .bd-grid {
-        width: 100%;
-    } */
     .main__avatar {
         margin-bottom: 40%;
         width: 20%;
@@ -192,7 +179,6 @@ form {
         height: 3px;
         left: 0;
         top: 32px;
-        /* background-color: var(--main-color); */
 }
     .nav__logo {
         width: 150px;
@@ -218,12 +204,10 @@ form {
     top: 32px;
     background-color: var(--text-color-aqua);
 }
-
 /* SHOW MENU */
 .show {
     right: 0;
 }
-
 /* HOME  */
 .home {
     padding: 64px 0 80px;
@@ -270,7 +254,6 @@ form {
     border-radius: 50%;
     filter: drop-shadow(0 0 20px var(--text-color-aqua));
 }
-
 /* BUTTONS */
 .button {
     background-color: var(--text-color-aqua);
@@ -278,14 +261,14 @@ form {
     color: var(--text-color-white);
     display: inline-block;
     font-weight: var(--font-weight);
-    outline: solid #0ef;
+    outline: solid var(--text-color-aqua);
     padding: 12px 40px;
     transition: background-color .3s ease;
 }
 .button:hover {
     box-shadow: 0 10px 36px rgba(0,0,0, .2);
     background-color: var(--bg-color-dark);
-    outline-color: #0ef;
+    outline-color: var(--text-color-aqua);
 }
 .button:focus {
     outline: 2px solid #000000;
@@ -387,6 +370,7 @@ form {
 .projects__img img {
     cursor: pointer;
     aspect-ratio: calc(3/2);
+    width: 100%;
 }
 
 /* CONTACT */
@@ -474,7 +458,7 @@ form {
     font-weight: var(--font-weight);
 }
 .border__technology {
-    border: 1px solid #1C6EA4;
+    border: 1px solid var(--text-color-aqua);
     border-radius: 40px;
     padding: 3px;
 }
@@ -490,9 +474,6 @@ form {
 /* MEDIA QUERIES  */
 /* MEDIA-QUERIES(MAX WIDTH: 320PX) */
 @media screen and (max-width: 320px){
-    .bd-grid {
-        width: 100%;
-    }
     .home{
         row-gap: 34px;
     }
@@ -502,9 +483,6 @@ form {
 }
 /* MEDIA-QUERIES(MIN-WIDTH: 576PX) */
 @media screen and (min-width: 576px) {
-    .bd-grid {
-        width: 100%;
-    }
     .home {
         padding: 60px 0 128px;
     }
@@ -547,15 +525,9 @@ form {
 }
 /* MEDIA-QUERIES(MIN-WIDTH: 768PX) */
 @media screen and (min-width: 768px){
-    body {
-        margin: 0;
-    }
-    .bd-grid {
-        width: 100%;
-    }
     .section {
-        padding-top: 64px;
-        padding-bottom: 48px;
+        /* padding-top: 64px;
+        padding-bottom: 48px; */
         padding: 100px 105px;
     }
     .section-title {
@@ -665,11 +637,12 @@ form {
     filter: drop-shadow(0 0 20px var(--text-color-forest));
 }
 .button {
-    color: var(--text-color-black);
+    color: var(--text-color-white);
     background-color: var(--text-color-forest);
 }
 .button:hover {
-    background-color: #ede7de;  
+    background-color: var(--bg-color-light);  
+    color: var(--text-color-forest);
 }
 .home__title-color {
     animation: glowForest 1.8s linear infinite;
@@ -686,7 +659,7 @@ form {
 }
 .border__technology {
     color: var(--bg-color-light);
-    border-color: #025a4e;
+    border-color: var(--text-color-forest);
 }
 .project__describe {
     color: var(--bg-color-light);
@@ -721,7 +694,7 @@ form {
 }
 .moon, .sun {
     position: relative;
-    background-color: #323946;
+    background-color: var(--bg-color-grey);
     width: 30px;
     height: 30px;
     cursor: pointer;
@@ -790,13 +763,13 @@ form {
     top: 10%;
     left: 10%;
     border-radius: 50%;
-    background: black;
+    background: #000;
 }
 .whites {
     position: absolute;
     width: 10%;
     height: 10%;
-    background: white;
+    background: #fff;
     border-radius: 50%;
     top: 35%;
     left: 45%
@@ -817,13 +790,13 @@ form {
     left:22%;
     border-left: 25px solid transparent;
 	border-right: 25px solid transparent;
-	border-top: 20px solid black;
+	border-top: 20px solid #000;
     border-radius: 90%;
     animation: sniff 1.5s infinite;
 }
 .line {
     position:absolute;
-    background: black;
+    background: #000;
     height:40px;
     width:4px;
     top:40%;
@@ -831,7 +804,7 @@ form {
 }
 .mouth {
     position: absolute;
-    background: black;
+    background: #000;
     width: 40%;
     left: 30%;
     height: 15px;
