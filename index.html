@@ -43,7 +43,7 @@
     <main class="l-main">
         <section class="home bd-grid" id="home">
             <div class="home__data">
-                <h1 class="home__title">Hi,<br>I'm <span class="home__title-color">Adam</span><br> Web Designer</h1>
+                <h1 class="home__title">Hi,<br>I'm <span class="home__title-color">Adam</span><br>Frontend Intern</h1>
                 <a href="#contact" class="button">Contact</a>
             </div>
 
@@ -53,7 +53,7 @@
                 <a href="#" class="home__social-icon"><i  class="fa-brands fa-facebook"></i></a>
             </div>
 
-            <div class="home__img" data-aos="zoom-in">
+            <div class="home__img" >
                 <img src="./images/Adam Grodzki.png" class="main__avatar" alt="my-photo-Adam-Grodzki">
                     </div>
                   </div>
@@ -75,7 +75,7 @@
 <br>                
 <p>I'm a <span class="about__describe">Frontend Web Developer</span> building the Front-end of Websites and Web Applications that leads to the success of the overall product. Check out some of my work in the <span class="about__describe">Projects</span> section.
     I'm open to <span class="about__describe">Job</span> opportunities where I can contribute, learn and grow. If you have a good opportunity that matches my skills and experience then don't hesitate to <span class="about__describe">contact</span> me.</p>                
-    <p>Outside work, I enjoy good coffee, riding a bike, playing computer or video games and playing football, exploring the world with my wife, and playing with my doggy <span class="about__describe">Cookie</span>.</p>
+    <p>Besides work, I enjoy good coffee, riding a bike, playing computer or video games and playing football, exploring the world with my wife, and playing with my doggy <span class="about__describe">Cookie</span>.</p>
 </div>
 </div>
             </div>
@@ -235,10 +235,11 @@
     <h2 class="section-title">CONTACT</h2>
 
     <div class="contact-container bd-grid">
-        <form action="mailto:adam.grodzki95@gmail.com" method="post" enctype="text/plain">
-            <input  class="contact__input" type="text" placeholder="Name" required>
-            <input  class="contact__input" type="email" placeholder="Email" required>
-            <textarea rows="10" class="contact__input"></textarea>
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="89ab90c3-3f7b-4026-b201-9b95b8216e3b">
+            <input  class="contact__input" name="name" type="text" placeholder="Name" required>
+            <input  class="contact__input" name="email" type="email" placeholder="Email" required>
+            <textarea rows="10" name="message" type="message" class="contact__input"></textarea>
 
             <button type="submit" value="Send" class="contact__button button">Send</button>
         </form>
@@ -261,6 +262,14 @@
     <a href="#" class="scrollUp" id="scroll-up"><i class="fa-solid fa-arrow-up scrollUp__icon"></i></a>
 
     <script src="./javaScript/app.js"></script>
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+    <!-- <script>
+        function runCode(e) {
+            console.log(e)
+           e.preventDefault(); 
+        }
+    </script> -->
+
 </body>
 </html>
 
