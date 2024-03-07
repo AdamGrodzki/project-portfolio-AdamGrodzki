@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@coreui/icons": "^3.0.1",
     "scrollreveal": "^4.0.9"
   }
 }

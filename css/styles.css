@@ -301,6 +301,7 @@ form {
 .skills__container {
     row-gap: 48px;
     text-align: center;
+    padding-top: 32px;
 }
 .skills__subtitle {
     margin-bottom: var(--mb-2);
@@ -444,9 +445,10 @@ form {
     font-size: 20px;
     position: absolute;
     width: 100%;
-    top: 35%;
+    top: 15%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-weight: bold;
 }
   .text__technology {
     text-align: center;
@@ -464,9 +466,10 @@ form {
 }
 .project__describe {
     position: absolute;
-    top: 62%;
+    top: 50%;
+    width: 80%;
     transform: translate(-50%, -50%);
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.25;
     font-weight: var(--font-weight);
     color: var(--text-color-white);
@@ -613,6 +616,7 @@ form {
     }
     .home__img {
         width: 360px;
+        margin: 110px 0;
     }
     .btn__mode {
         display: flex;
@@ -705,147 +709,6 @@ form {
     var(--bg-color-dark), var(--bg-color-grey));
 }
 
-
-/* DOG */
-.box {
-    position: relative;
-    margin: auto;
-    top:5%;
-    width: 250px;
-    height: 250px;
-}
-.head {
-    position: absolute;
-    left: 50%;
-    width: 100%;
-    height: 85%;
-    background: #aa7733;
-    border-radius: 50%;
-    z-index: 10;
-    transform: translate(-50%, -50%);
-}
-.ear {
-    position: absolute;
-    width: 50%;
-    height: 55%;
-    top: 0%;
-    border-radius: 25%;
-    background: #553311;
-    z-index: 10;
-    clip-path: polygon(100% 0, 0 0, 50% 100%);
-}
-.ear-left {
-    left: -22%;
-}
-.ear-right {
-    right: -22%;
-}
-.eye {
-    position: absolute;
-    background: #553311;
-    width: 25%;
-    height: 25%;
-    top: 35%;
-    border-radius: 50%;
-    z-index: 10;
-    animation: blink 2s infinite linear;
-}
-.eye-left {
-    left: 22%;
-}
-.eye-right {
-    right: 22%;
-}
-.pupil {
-    position: absolute;
-    width: 80%;
-    height: 80%;
-    top: 10%;
-    left: 10%;
-    border-radius: 50%;
-    background: #000;
-}
-.whites {
-    position: absolute;
-    width: 10%;
-    height: 10%;
-    background: #fff;
-    border-radius: 50%;
-    top: 35%;
-    left: 45%
-}
-.nose {
-    position: absolute;
-    background: #553311;
-    height: 35%;
-    width: 35%;
-    top: 60%;
-    left: 30%;
-    border-radius: 50%;
-    z-index: 10;
-}
-.inner-nose {
-    position:absolute;
-    top:21%;
-    left:22%;
-    border-left: 25px solid transparent;
-	border-right: 25px solid transparent;
-	border-top: 20px solid #000;
-    border-radius: 90%;
-    animation: sniff 1.5s infinite;
-}
-.line {
-    position:absolute;
-    background: #000;
-    height:40px;
-    width:4px;
-    top:40%;
-    left:48.5%;
-}
-.mouth {
-    position: absolute;
-    background: #000;
-    width: 40%;
-    left: 30%;
-    height: 15px;
-    border-radius: 0 0 30px 30px;
-    top: 77%;
-    border-top: 3px solid var(--text-color-white);
-}
-.tongue {
-    position: relative;
-    width: 20px;
-    height: 40px;
-    border-radius: 5px 5px 10px 10px;
-    background: #FF6B5A;
-    margin: 0 auto;
-    top: 61px;
-    transition: 300ms;
-    animation: grow .1s infinite alternate;
-}
-.collar {
-    background: #c1ff1c;
-    position: absolute;
-    height: 30px;
-    width: 150px;
-    top: 96%;
-    left: 19%;
-    z-index: -1;
-}
-.tag {
-    display: none;
-    background: orange;
-    position: absolute;
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-    bottom: -15%;
-    left: 50%;
-    z-index: 10;
-    text-align: center;
-    color: var(--text-color-black);
-    font-weight: var(--font-weight);
-}
 .scrollUp {
     position: fixed;
     right: 16px;
@@ -888,16 +751,14 @@ form {
     70% {filter: drop-shadow(0 0 5px var(--text-color-white));}
     100% {filter: drop-shadow(0 0 5px var(--bg-color-dark));}
 }
-@keyframes blink {
-    5% {transform: scaleY(.1);}
-    15% {transform: scaleY(1);}
-}
-@keyframes grow {
-    0% {animation: ease-in;}
-    100% {height: 35px;}
-}
-@keyframes sniff {
-    0% { transform: rotate(-5deg);}
-    50% { transform: rotate(5deg);}
-    100% { transform: rotate(-5deg);}
-}
+
+.simple-icons--netlify {
+    position: absolute;
+    bottom: 65px;
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M6.49 19.04h-.23L5.13 17.9v-.23l1.73-1.71h1.2l.15.15v1.2L6.5 19.04ZM5.13 6.31V6.1l1.13-1.13h.23L8.2 6.68v1.2l-.15.15h-1.2zm9.96 9.09h-1.65l-.14-.13v-3.83c0-.68-.27-1.2-1.1-1.23c-.42 0-.9 0-1.43.02l-.07.08v4.96l-.14.14H8.9l-.13-.14V8.73l.13-.14h3.7a2.6 2.6 0 0 1 2.61 2.6v4.08l-.13.14Zm-8.37-2.44H.14L0 12.82v-1.64l.14-.14h6.58l.14.14v1.64zm17.14 0h-6.58l-.14-.14v-1.64l.14-.14h6.58l.14.14v1.64zM11.05 6.55V1.64l.14-.14h1.65l.14.14v4.9l-.14.14h-1.65zm0 15.81v-4.9l.14-.14h1.65l.14.13v4.91l-.14.14h-1.65z'/%3E%3C/svg%3E");
+    mask-image: var(--svg);
+    background-color: #1ac7b8;
+  }
