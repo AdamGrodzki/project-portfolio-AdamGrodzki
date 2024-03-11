@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
 :root {
     --header-height: 48px;
     --font-weight: 600;
@@ -316,7 +315,7 @@ form {
     position: relative;
     font-weight: var(--font-weight);
     padding: 8px 16px;
-    margin-bottom: var(--mb-4);
+    margin-bottom: var(--mb-2);
     border-radius: 8px;
     box-shadow: 0 4px 25px rgba(14, 36, 49, .5);
 }
@@ -365,7 +364,7 @@ form {
 }
 .projects__img {
     box-shadow: 0 4px 25px rgba(14, 36, 49, .5);
-    border-radius: 10px;
+    border-radius: 8px;
     overflow: hidden;
 }
 .projects__img img {
@@ -380,7 +379,7 @@ form {
     font-size: var(--normal-font-size);
     font-weight: var(--font-weight);
     padding: 16px;
-    border-radius: 20px;
+    border-radius: 8px;
     border: solid 1.5px var(--bg-color-dark);
     outline: none;
     margin-bottom: var(--mb-4);
@@ -461,7 +460,7 @@ form {
 }
 .border__technology {
     border: 1px solid var(--text-color-aqua);
-    border-radius: 40px;
+    border-radius: 8px;
     padding: 3px;
 }
 .project__describe {
@@ -505,7 +504,7 @@ form {
     }
     .about__container {
         grid-template-columns: repeat(2, 1fr);
-        align-items: center;
+        /* align-items: center; */
         text-align: initial;
     }
     .skills__container {
@@ -703,6 +702,7 @@ form {
     height: 30px;
     cursor: pointer;
     font-size: 20px;
+    border-radius: 8px;
 }
 .moon:hover, .sun:hover {
     background: linear-gradient(to bottom, 
@@ -717,7 +717,7 @@ form {
     background-color: var(--text-color-aqua);
     opacity: .8;
     padding: 6px;
-    border-radius: 6px;
+    border-radius: 8px;
     z-index: var(--z-fixed);
     transition: .4s;
 }

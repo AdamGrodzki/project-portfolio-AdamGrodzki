@@ -76,7 +76,6 @@ sr.reveal('.projects__img, .contact__input', {interval: 200});
 const darkMode = () => document.body.className = "dark-mode";
 const lightMode = () => document.body.className = "light-mode";
 
-
 document.getElementById("dark__mode").addEventListener("click", darkMode);
 document.getElementById("light__mode").addEventListener("click", lightMode);
 
@@ -94,5 +93,3 @@ function ScrollUp() {
     this.scrollY >= 300 ? scrollUp.classList.add('show-scroll') : scrollUp.classList.remove('show-scroll');
 }
 window.addEventListener('scroll', ScrollUp);
-
-
