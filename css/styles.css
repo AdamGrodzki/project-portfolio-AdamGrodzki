@@ -746,6 +746,14 @@ form {
     mask-image: var(--svg);
     background-color: #1ac7b8;
   }
+  .fa-itch-io {
+    position: absolute;
+    left: 30px;
+    bottom: 65px;
+    display: inline-block;
+    font-size: 26px;
+    color: #fa5c5c;
+  }
 
   .tooltip:hover::before {
     content: 'Check me out on the netlify!';
@@ -756,9 +764,20 @@ form {
     bottom: 65px;
     left: 60px;
 }
-
 .tooltip:hover::before {
-display: block;
+    display: block;
+}
+.tooltip__Itch:hover::before {
+    content: 'Check me out on the itch.io';
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-white);
+    position: absolute;
+    display: none;
+    bottom: 65px;
+    left: 60px;
+}
+.tooltip__Itch:hover::before {
+    display: block;
 }
 /* KEYFRAMES  */
 @keyframes flash {
